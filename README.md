@@ -8,7 +8,6 @@ Easy Setup Headless multi session Whatsapp Gateway with NodeJS
 - Send Image
 - Send Document
 
-#### Read also [wa-multi-session](https://github.com/mimamch/wa-multi-session)
 
 ### ⚠️ This application need to running in NodeJS v18 or later. ⚠️
 
@@ -208,14 +207,3 @@ http://localhost:5001/media/3A5089C2F2652D46EBC5.jpg
 npm install wa-multi-session@latest
 ```
 
-## Documentation
-
-For detailed documentation, including guides and API references, please visit the [official documentation](https://github.com/mimamch/wa-gateway).
-
-## Contributing
-
-Contributions are welcome! Please follow the guidelines outlined in the [CONTRIBUTING.md](https://github.com/mimamch/wa-gateway/blob/main/CONTRIBUTING.md) file.
-
-## License
-
-This library is licensed under the [MIT License](https://github.com/mimamch/wa-gateway/blob/main/LICENSE).
