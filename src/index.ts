@@ -65,9 +65,9 @@ serve(
 whastapp.onConnected((session) => {
   console.log(`session: '${session}' connected`);
 });
-// whastapp.onMessageReceived((message) => {
-//   console.log("Received message:", message);
-//   });
+whastapp.onMessageReceived((message) => {
+  console.log("Received message:", message);
+  });
 // message webhook
 //   const webhookProps: CreateWebhookProps = {
 //     baseUrl: env.WEBHOOK_BASE_URL,

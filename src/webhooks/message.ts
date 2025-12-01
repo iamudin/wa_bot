@@ -1,4 +1,6 @@
 import { MessageReceived } from "wa-multi-session";
+import * as whatsapp from "wa-multi-session";
+
 import { CreateWebhookProps, webhookClient } from ".";
 import {
   handleWebhookAudioMessage,
@@ -9,7 +11,7 @@ import {
 
 type WebhookMessageBody = {
   session: string;
-  from: string | null;
+  from: string[] | null;
   message: string | null;
 
   media: {
@@ -31,10 +33,14 @@ export const createWebhookMessage =
     const video = await handleWebhookVideoMessage(message);
     const document = await handleWebhookDocumentMessage(message);
     const audio = await handleWebhookAudioMessage(message);
-
+    await whatsapp.readMessage({
+      sessionId: 'sadhan',
+      key:message.key
+    });
+  
     const body = {
       session: message.sessionId,
-      from: message.key.remoteJid ?? null,
+      from: [message.key.remoteJid, message.key.remoteJidAlt],
       message:
         message.message?.conversation ||
         message.message?.extendedTextMessage?.text ||
